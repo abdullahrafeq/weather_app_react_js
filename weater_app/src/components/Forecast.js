@@ -1,3 +1,5 @@
+import ForecastCard from './ForecastCard.js';
+
 function Forecast() {
     return (
         <section class="daily">
@@ -5,7 +7,7 @@ function Forecast() {
                 Forecast
             </p>
             <ul id="forecast">
-                
+                <ForecastCard />
             </ul>
         </section>
     );
