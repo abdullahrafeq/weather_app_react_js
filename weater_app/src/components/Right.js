@@ -6,9 +6,11 @@ function Right() {
     return (
         <aside className="right">
             <ul>         
-                {RightData.map((item) => {
+                {RightData.map((item, index) => {
                     console.log(item.title);
-                    <DetailItem title={item.title} value={item.value}/>
+                    return (
+                        <DetailItem key={index} title={item.title} value={item.value}/>
+                    );
                 })}  
             </ul>
         </aside>

@@ -1,4 +1,4 @@
-function DetailItem(title, value) {
+function DetailItem({title, value}) {
     return (
         <li>
             <p className="value" id="high">
