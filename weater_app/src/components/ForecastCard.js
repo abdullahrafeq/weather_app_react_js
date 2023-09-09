@@ -1,10 +1,10 @@
-function ForecastCard() {
+function ForecastCard({date, time, icon, temperature}) {
     return (
         <li>
-            <p>Date</p>
-            <p>Time</p>
-            <p>Icon</p>
-            <p>Temperature</p>
+            <p>{date}</p>
+            <p>{time}</p>
+            <p>{icon}</p>
+            <p>{temperature}</p>
         </li>
     );
 }

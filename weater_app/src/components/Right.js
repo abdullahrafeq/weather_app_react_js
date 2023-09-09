@@ -10,7 +10,11 @@ function Right() {
                 {RightData.map((item, index) => {
                     console.log(item.title);
                     return (
-                        <DetailItem key={index} title={item.title} value={item.value}/>
+                        <DetailItem 
+                            key={index} 
+                            title={item.title} 
+                            value={item.value}
+                        />
                     );
                 })}  
             </ul>
