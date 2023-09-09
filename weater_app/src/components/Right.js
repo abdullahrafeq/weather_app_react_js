@@ -1,12 +1,12 @@
-import DetailItem from './components/DetailItem';
-import RightData  from '../data/RightData';
+import DetailItem from './DetailItem.js';
+import RightData  from '../data/RightData.js';
 
 function Right() {
 
     return (
-        <aside class="right">
+        <aside className="right">
             <ul>         
-                {RightData.map((item, index) => {
+                {RightData.map((item) => {
                     <DetailItem title={item.title} value={item.value}/>
                 })}  
             </ul>

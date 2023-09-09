@@ -1,26 +1,26 @@
 export default [
     {
         title: "High",
-        value: ""
+        value: "1"
     },
     {
         title: "Wind",
-        value: ""
+        value: "2"
     },
     {
         title: "Sunrise",
-        value: ""
+        value: "3"
     },
     {
         title: "Low",
-        value: ""
+        value: "4"
     },
     {
         title: "Rain",
-        value: ""
+        value: "5"
     },
     {
         title: "Sunset",
-        value: ""
-    },
+        value: "6"
+    }
 ]

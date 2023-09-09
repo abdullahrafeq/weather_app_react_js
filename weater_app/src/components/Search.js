@@ -2,9 +2,9 @@ function Search() {
     return (
     <header>
         <form>
-            <input placeholder="Search" class="search-icon" type="text" id="search" value=""></input>
+            <input placeholder="Search" className="search-icon" type="text" id="search" value=""></input>
             <button id="btn">
-                <i class="fa-solid fa-magnifying-glass"></i>
+                <i className="fa-solid fa-magnifying-glass"></i>
             </button>
         </form>
     </header>

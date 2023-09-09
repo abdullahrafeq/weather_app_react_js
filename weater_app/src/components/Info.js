@@ -1,6 +1,6 @@
 function Info() {
     return (
-        <section class="info">
+        <section className="info">
             <p id="place">
                 Sverige
             </p>

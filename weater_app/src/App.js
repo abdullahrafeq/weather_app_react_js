@@ -1,6 +1,8 @@
 import './App.css';
-import Search from './components/Search.js';
+import Search from './components/Search';
 import Info from './components/Info.js';
+import Left from './components/Left';
+import Right from './components/Right.js';
 
 function App() {
   return (
@@ -8,6 +10,8 @@ function App() {
       <Search />
       <main>
         <Info />
+        <Left />
+        <Right />
       </main>
     </div>
   );

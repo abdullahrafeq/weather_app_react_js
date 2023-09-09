@@ -1,8 +1,8 @@
 function Left() {
     return (
-        <aside class="left">
+        <aside className="left">
             <span id="mainWeatherIcon">
-                <i class="fa-solid fa-cloud"></i>
+                <i className="fa-solid fa-cloud"></i>
             </span>
             <span>
                 <p id="temp">
