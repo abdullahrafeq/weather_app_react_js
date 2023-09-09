@@ -12,3 +12,5 @@ function Forecast() {
         </section>
     );
 }
+
+export default Forecast;
