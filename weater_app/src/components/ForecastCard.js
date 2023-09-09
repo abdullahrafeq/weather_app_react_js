@@ -4,7 +4,7 @@ function ForecastCard({date, time, icon, temperature}) {
             <p>{date}</p>
             <p>{time}</p>
             <p>{icon}</p>
-            <p>{temperature}</p>
+            <p>{temperature}{'\u00b0'}</p>
         </li>
     );
 }
