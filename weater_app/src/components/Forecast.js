@@ -3,7 +3,7 @@ import './Forecast.css';
 
 function Forecast() {
     return (
-        <section class="daily">
+        <section className="daily">
             <p>
                 Forecast
             </p>
