@@ -1,5 +1,6 @@
 import DetailItem from './DetailItem.js';
 import RightData  from '../data/RightData.js';
+import './Right.css';
 
 function Right() {
 

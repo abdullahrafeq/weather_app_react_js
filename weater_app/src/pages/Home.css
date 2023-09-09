@@ -1,0 +1,9 @@
+main {
+    grid-area: main;
+    display: grid;
+    grid-template-areas: 
+    "info info"
+    "left right"
+    "daily daily";
+    grid-template-columns: 50% 50%;
+}

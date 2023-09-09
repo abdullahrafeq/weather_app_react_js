@@ -1,0 +1,49 @@
+header {
+    grid-area: header;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 70px 0px 0px;
+}
+
+header > form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+:root {
+    --input-height: 40px;
+    --rounded: calc(var(--input-height) * 0.5);
+    --input-corner: var(--rounded);
+    --btn-length: 30px;
+    --weather: 100px;
+    --white-shade: rgba(255, 255, 255, 0.3);
+}
+
+header > form > input {
+    height: var(--input-height);
+    width: 500px;
+    border: 0;
+    padding: 0;
+    padding-left: calc(var(--input-height) * 0.3);
+    border-radius: var(--input-corner);
+}
+
+header > form > button {
+    width: var(--btn-length);
+    height: var(--btn-length);
+    border: 0;
+    padding: 0;
+    transform: translate(calc(var(--btn-length) * -1.5));
+    background-color: inherit;
+    color: gray;
+}
+
+header > form > input:focus {
+    outline: none !important;
+}
+
+header > form > button:hover {
+    cursor: pointer;
+}

@@ -1,3 +1,5 @@
+import './Left.css';
+
 function Left() {
     return (
         <aside className="left">

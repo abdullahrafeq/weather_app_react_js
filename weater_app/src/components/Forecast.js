@@ -1,4 +1,5 @@
 import ForecastCard from './ForecastCard.js';
+import './Forecast.css';
 
 function Forecast() {
     return (

@@ -1,4 +1,4 @@
-function forecastCard() {
+function ForecastCard() {
     return (
         <li>
             <p>Date</p>
@@ -9,4 +9,4 @@ function forecastCard() {
     );
 }
 
-export default forecastCard;
+export default ForecastCard;
