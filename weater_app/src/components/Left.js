@@ -1,15 +1,15 @@
 import './Left.css';
-import 'font-awesome/css/font-awesome.min.css';
+import FontAwesomeIcon from '../assets/Logos/FontAwesome';
 
 function Left() {
     return (
         <aside className="left">
             <span id="mainWeatherIcon">
-                <i className="fa-solid fa-cloud"></i>
+                <FontAwesomeIcon iconName={"cloud"}/>
             </span>
             <span>
                 <p id="temp">
-
+                    7{'\u00b0'}
                 </p>
                 <p id="weatherDescription">
                     Overcast clouds

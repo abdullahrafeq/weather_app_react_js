@@ -1,6 +1,6 @@
 const FontAwesomeIcon = ({ iconName }) => {
     return (
-        <i className={`fa fa-${iconName}`} />
+        <i className={`fa-solid fa-${iconName}`}></i>
     );
   };
 
