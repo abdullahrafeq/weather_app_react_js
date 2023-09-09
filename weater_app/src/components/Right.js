@@ -7,6 +7,7 @@ function Right() {
         <aside className="right">
             <ul>         
                 {RightData.map((item) => {
+                    console.log(item.title);
                     <DetailItem title={item.title} value={item.value}/>
                 })}  
             </ul>
