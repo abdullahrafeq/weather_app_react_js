@@ -11,13 +11,14 @@ function Search() {
     }
 
     const getLocation = () => {
-        fetch(`https://nominatim.openstreetmap.org/search?format=json&limit=3&q=${inputValue}`)
+        console.log("1: "+inputValue);
+        fetch(`http://localhost:5000/location/${inputValue}`)
         .then(response => response.json())
         .then(data => {
             console.log(data);
-            setLatitude(data[0].lat);
-            setLongitude(data[0].lon);
-            setInputValue("");
+            //setLatitude(data[0].lat);
+            //setLongitude(data[0].lon);
+            //setInputValue("");
         })
         .catch(error => console.error("Error fetching data:", error));
     }

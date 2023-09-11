@@ -13,7 +13,9 @@
   "license": "ISC",
   "dependencies": {
     "cors": "^2.8.5",
-    "express": "^4.18.2"
+    "esm": "^3.2.25",
+    "express": "^4.18.2",
+    "node-fetch": "^18.16.1"
   },
   "devDependencies": {
     "nodemon": "^3.0.1"
