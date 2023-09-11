@@ -9,9 +9,10 @@ function Forecast() {
                 Forecast
             </p>
             <ul id="forecast">
-                {ForeCastData.map((card) => {
+                {ForeCastData.map((card, index) => {
                     return (
                         <ForecastCard 
+                            key={index}
                             date={card.date} 
                             time={card.time}
                             icon={card.icon} 
