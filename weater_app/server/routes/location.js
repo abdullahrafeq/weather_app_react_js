@@ -1,11 +1,7 @@
 const express = require('express');
-const cors = require('cors');
-const app = express();
+const router = express.Router();
 
-app.use(cors());
-
-/*
-app.get("/location/:inputLocation", (req, res) => {
+router.get("/:inputLocation", (req, res) => {
     const inputLocation = req.params.inputLocation;    
     fetch(`https://nominatim.openstreetmap.org/search?format=json&limit=3&q=${inputLocation}`)
     .then(response => response.json())
@@ -15,10 +11,5 @@ app.get("/location/:inputLocation", (req, res) => {
     })
     .catch(error => console.log(error))    
 })
-*/
 
-const locationRouter = require('./routes/location');
-
-app.use('/location', locationRouter);
-
-app.listen(5000, () => {console.log("Server started on port 5000")})
+module.exports = router;
