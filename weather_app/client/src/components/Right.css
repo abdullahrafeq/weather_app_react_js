@@ -1,0 +1,30 @@
+.right {
+    grid-area: right;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.right ul {
+    list-style: none;
+    margin: 0;
+    padding: 30px;
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    column-gap: 150px;
+    row-gap: 40px;
+    background-color: var(--white-shade);
+    border-radius: 10px;
+}
+
+.right ul li {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+
+.right ul li > p:first-child {
+    font-size: 20px;
+}

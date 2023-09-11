@@ -1,0 +1,19 @@
+.left {
+    grid-area: left;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+}
+
+.left > span > i{
+    font-size: var(--weather);
+}
+
+.left > span:nth-child(2) > p:first-child {
+    font-size: var(--weather);
+}
+
+.left > span:nth-child(2) > p:nth-child(2) {
+    font-size: 20px;
+}

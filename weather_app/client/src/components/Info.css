@@ -1,0 +1,13 @@
+.info {
+    grid-area: info;
+}
+
+.info p:first-child {
+    font-size: 40px;
+    font-weight: bold;
+}
+
+.info p:last-child {
+    font-size: 30px;
+    font-weight: lighter;
+}
