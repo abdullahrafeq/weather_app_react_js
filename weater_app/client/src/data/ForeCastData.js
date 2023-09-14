@@ -76,11 +76,5 @@ export default [
         time: "Time",
         icon: "Icon",
         temperature: "Temperature"
-    },
-    {
-        date: "Date",
-        time: "Time",
-        icon: "Icon",
-        temperature: "Temperature"
     }
 ]
