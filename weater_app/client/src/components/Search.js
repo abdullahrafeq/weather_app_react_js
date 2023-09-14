@@ -16,9 +16,13 @@ function Search() {
         .then(response => response.json())
         .then(data => {
             console.log(data);
-            //setLatitude(data[0].lat);
-            //setLongitude(data[0].lon);
-            //setInputValue("");
+            setLatitude(data[0].lat);
+            setLongitude(data[0].lon);
+            return fetch(`http://localhost:5000/weather/${data[0].lat}/${data[0].lon}`)
+        })
+        .then(response => response.json())
+        .then(data => {
+            console.log(data);
         })
         .catch(error => console.error("Error fetching data:", error));
     }

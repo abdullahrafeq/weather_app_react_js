@@ -1,5 +1,5 @@
 const express = require('express');
-const router = express.Router();
+const router = express.Router(); 
 
 router.get("/:inputLocation", (req, res) => {
     const inputLocation = req.params.inputLocation;    
@@ -11,5 +11,6 @@ router.get("/:inputLocation", (req, res) => {
     })
     .catch(error => console.log(error))    
 })
+
 
 module.exports = router;
