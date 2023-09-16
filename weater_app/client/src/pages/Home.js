@@ -4,16 +4,19 @@ import Left from '../components/Left';
 import Right from '../components/Right.js';
 import Forecast from '../components/Forecast.js';
 import './Home.css';
+import { useState } from 'react';
 
 function Home() {
+    let [weatherData, setWeatherData] = useState({});
+    
     return (
     <>
-        <Search />
+        <Search setWeatherData={setWeatherData}/>
         <main>
             <Info />
             <Left />
             <Right />
-            <Forecast />
+            <Forecast data={weatherData}/>
         </main>
     </>
     );

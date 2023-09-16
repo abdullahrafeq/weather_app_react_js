@@ -3,12 +3,11 @@ import RightData  from '../data/RightData.js';
 import './Right.css';
 
 function Right() {
-
     return (
         <aside className="right">
             <ul>         
                 {RightData.map((item, index) => {
-                    console.log(item.title);
+                    //console.log(item.title);
                     return (
                         <DetailItem 
                             key={index} 

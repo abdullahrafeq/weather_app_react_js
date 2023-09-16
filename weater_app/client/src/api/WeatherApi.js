@@ -2,7 +2,7 @@ export default function WeatherApi(lat, lon) {
     return fetch(`http://localhost:5000/weather/${lat}/${lon}`)
     .then(response => response.json())
     .then(data => {
-        //console.log(data)
+        console.log(data)
         let a = parseCurrentWeather(data);
         let b = parseDaily(data);
         let c = parseHourly(data)
@@ -33,7 +33,7 @@ function parseDaily({daily}) {
     return {currentSunrise, currentSunset, maxTemp, minTemp};
 }
 
-function parseHourly({hourly: {rain, temperature_2m, time}, utc_offset_seconds}) {
+function parseHourly({hourly: {is_day, temperature_2m, time, weathercode}, utc_offset_seconds}) {
 
     console.log("seconds offset: " + utc_offset_seconds);
     let utcDate = new Date();
@@ -48,7 +48,8 @@ function parseHourly({hourly: {rain, temperature_2m, time}, utc_offset_seconds})
     let currentHour = utcDate.getHours();
     let hours = [];
     let temps = [];
-    let currentRain;
+    let weathercodeArr = [];
+    let isDayArr = [];
     let i = 0; 
     let count = 0;
     
@@ -57,15 +58,18 @@ function parseHourly({hourly: {rain, temperature_2m, time}, utc_offset_seconds})
         if (time[i].substring(time[i].length-5, time[i].length-3) === (currentHour < 10 ? "0" + currentHour : currentHour.toString()) && count === 0) {
             hours.push(time[i]);
             temps.push(temperature_2m[i]);
-            currentRain = rain[i];
+            weathercodeArr.push(weathercode[i]);
+            isDayArr.push(is_day[i]);
             count++;
         } else if (count > 0) {
             hours.push(time[i]);
             temps.push(temperature_2m[i]);
+            weathercodeArr.push(weathercode[i]);
+            isDayArr.push(is_day[i]);
             count++;
         }
         i++;
     }
 
-    return {currentRain, temps, hours};
+    return {isDayArr, temps, hours, weathercodeArr};
 }

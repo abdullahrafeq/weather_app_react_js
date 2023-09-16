@@ -1,80 +1,80 @@
 export default [
     {
-        date: "Date",
-        time: "Time",
+        date: "",
+        time: "",
         icon: "Icon",
-        temperature: "Temperature"
+        temperature: ""
     },
     {
-        date: "Date",
-        time: "Time",
+        date: "",
+        time: "",
         icon: "Icon",
-        temperature: "Temperature"
+        temperature: ""
     },
     {
-        date: "Date",
-        time: "Time",
+        date: "",
+        time: "",
         icon: "Icon",
-        temperature: "Temperature"
+        temperature: ""
     },
     {
-        date: "Date",
-        time: "Time",
+        date: "",
+        time: "",
         icon: "Icon",
-        temperature: "Temperature"
+        temperature: ""
     },
     {
-        date: "Date",
-        time: "Time",
+        date: "",
+        time: "",
         icon: "Icon",
-        temperature: "Temperature"
+        temperature: ""
     },
     {
-        date: "Date",
-        time: "Time",
+        date: "",
+        time: "",
         icon: "Icon",
-        temperature: "Temperature"
+        temperature: ""
     },
     {
-        date: "Date",
-        time: "Time",
+        date: "",
+        time: "",
         icon: "Icon",
-        temperature: "Temperature"
+        temperature: ""
     },
     {
-        date: "Date",
-        time: "Time",
+        date: "",
+        time: "",
         icon: "Icon",
-        temperature: "Temperature"
+        temperature: ""
     },
     {
-        date: "Date",
-        time: "Time",
+        date: "",
+        time: "",
         icon: "Icon",
-        temperature: "Temperature"
+        temperature: ""
     },
     {
-        date: "Date",
-        time: "Time",
+        date: "",
+        time: "",
         icon: "Icon",
-        temperature: "Temperature"
+        temperature: ""
     },
     {
-        date: "Date",
-        time: "Time",
+        date: "",
+        time: "",
         icon: "Icon",
-        temperature: "Temperature"
+        temperature: ""
     },
     {
-        date: "Date",
-        time: "Time",
+        date: "",
+        time: "",
         icon: "Icon",
-        temperature: "Temperature"
+        temperature: ""
     },
     {
-        date: "Date",
-        time: "Time",
+        date: "",
+        time: "",
         icon: "Icon",
-        temperature: "Temperature"
+        temperature: ""
     }
 ]
