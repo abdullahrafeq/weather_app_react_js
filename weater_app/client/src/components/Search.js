@@ -1,8 +1,11 @@
 import './Search.css';
 import React, {useState} from 'react';
+import LocationApi from '../api/LocationApi';
+import WeatherApi from '../api/WeatherApi';
 
 function Search() {
     let [inputValue, setInputValue] = useState("");
+    let [weatherData, setWeatherData] = useState({});
     
     const handleInputChange = (event) => {
         setInputValue(event.target.value);
@@ -10,6 +13,19 @@ function Search() {
 
     const getLocation = () => {
         console.log("1: "+inputValue);
+        LocationApi(inputValue)
+        .then(locationData => {
+            const {lat, lon} = locationData;
+            return WeatherApi(lat, lon);
+        })
+        .then(weatherData => {
+            console.log("WeatherData: ")
+            console.log(weatherData)
+            setWeatherData(weatherData)
+        })
+        .catch(error => console.log(error))
+        
+        /*
         fetch(`http://localhost:5000/location/${inputValue}`)
         .then(response => response.json())
         .then(data => {
@@ -21,6 +37,7 @@ function Search() {
             console.log(data);
         })
         .catch(error => console.error("Error fetching data:", error));
+        */
     }
       
     return (
