@@ -6,7 +6,7 @@ router.get("/:inputLocation", (req, res) => {
     fetch(`https://nominatim.openstreetmap.org/search?format=json&limit=3&q=${inputLocation}`)
     .then(response => response.json())
     .then(data => {
-        console.log(data);
+        //console.log(data);
         res.json(data);
     })
     .catch(error => console.log(error))    

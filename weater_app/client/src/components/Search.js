@@ -2,8 +2,9 @@ import './Search.css';
 import React, {useState} from 'react';
 import LocationApi from '../api/LocationApi';
 import WeatherApi from '../api/WeatherApi';
+import TranslateWeekDay from '../api/TranslateWeekDay';
 
-function Search({setWeatherData}) {
+function Search({setWeatherData, setWeekDay}) {
     let [inputValue, setInputValue] = useState("");
     
     const handleInputChange = (event) => {
@@ -13,11 +14,17 @@ function Search({setWeatherData}) {
     const getWeather = () => {
         LocationApi(inputValue)
         .then(locationData => {
-            const {lat, lon} = locationData;
-            return WeatherApi(lat, lon);
+            const {locationName, lat, lon} = locationData;
+            return WeatherApi(locationName, lat, lon);
         })
         .then(weatherData => {
             setWeatherData(weatherData);
+            return TranslateWeekDay();
+        })
+        .then(translatedText => {
+            let {translation} = translatedText;
+            console.log(translation);
+            setWeekDay(translation);
         })
         .catch(error => console.log(error))
     }

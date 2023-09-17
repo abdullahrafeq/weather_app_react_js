@@ -8,12 +8,13 @@ import { useState } from 'react';
 
 function Home() {
     let [weatherData, setWeatherData] = useState({});
+    let [weekDay, setWeekDay] = useState("");
     
     return (
     <>
-        <Search setWeatherData={setWeatherData}/>
+        <Search setWeatherData={setWeatherData} setWeekDay={setWeekDay} />
         <main>
-            <Info data={weatherData}/>
+            <Info data={weatherData} day={weekDay}/>
             <Left data={weatherData}/>
             <Right data={weatherData}/>
             <Forecast data={weatherData}/>

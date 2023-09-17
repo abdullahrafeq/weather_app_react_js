@@ -1,12 +1,12 @@
-export default function WeatherApi(lat, lon) {
+export default function WeatherApi(locationName, lat, lon) {
     return fetch(`http://localhost:5000/weather/${lat}/${lon}`)
     .then(response => response.json())
     .then(data => {
-        console.log(data)
+        //console.log(data)
         let a = parseCurrentWeather(data);
         let b = parseDaily(data);
-        let c = parseHourly(data)
-        return {a, b, c};
+        let c = parseHourly(data);
+        return {a, b, c, locationName};
     })
     .catch(error => {
         console.log("Error while fetching weather: " + error);

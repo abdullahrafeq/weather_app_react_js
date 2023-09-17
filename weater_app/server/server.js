@@ -6,8 +6,10 @@ app.use(cors());
 
 const locationRouter = require('./routes/location');
 const weatherRouter = require('./routes/weather');
+const translateRouter = require('./routes/weekday');
 
 app.use('/location', locationRouter);
 app.use('/weather', weatherRouter);
+app.use('/weekday', translateRouter);
 
 app.listen(5000, () => {console.log("Server started on port 5000")});

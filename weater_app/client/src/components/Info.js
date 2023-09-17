@@ -1,7 +1,10 @@
 import './Info.css';
 import InfoData from '../data/InfoData.js';
+import changeInfo from '../functions/changeInfo';
 
-function Info({data}) {
+function Info({data, day}) {
+    changeInfo(data, InfoData, day);
+    
     return (
         <section className="info">
             <p id="place">
