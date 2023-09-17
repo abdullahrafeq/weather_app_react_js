@@ -2,8 +2,11 @@ export default function setIcon(weathercode, isDay) {
     let weather;
     weathercodes.map(code => {
         if (code.codes.includes(weathercode)) {
-            if (code.description.includes("sun") && isDay === 0) {
+            console.log("description: " + code.description + "    isDay: " + isDay)
+            if (isDay === 0) {
                 code.description = code.description.replace("sun", "moon");
+            } else {
+                code.description = code.description.replace("moon", "sun");
             }
             weather = code.description;
             return;

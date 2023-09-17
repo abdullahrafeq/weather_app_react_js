@@ -33,7 +33,7 @@ function parseDaily({daily}) {
     return {currentSunrise, currentSunset, maxTemp, minTemp};
 }
 
-function parseHourly({hourly: {is_day, temperature_2m, time, weathercode}, utc_offset_seconds}) {
+function parseHourly({hourly: {is_day, rain, temperature_2m, time, weathercode}, utc_offset_seconds}) {
 
     console.log("seconds offset: " + utc_offset_seconds);
     let utcDate = new Date();
@@ -50,6 +50,7 @@ function parseHourly({hourly: {is_day, temperature_2m, time, weathercode}, utc_o
     let temps = [];
     let weathercodeArr = [];
     let isDayArr = [];
+    let currentRain;
     let i = 0; 
     let count = 0;
     
@@ -60,6 +61,7 @@ function parseHourly({hourly: {is_day, temperature_2m, time, weathercode}, utc_o
             temps.push(temperature_2m[i]);
             weathercodeArr.push(weathercode[i]);
             isDayArr.push(is_day[i]);
+            currentRain = rain[i];
             count++;
         } else if (count > 0) {
             hours.push(time[i]);
@@ -71,5 +73,5 @@ function parseHourly({hourly: {is_day, temperature_2m, time, weathercode}, utc_o
         i++;
     }
 
-    return {isDayArr, temps, hours, weathercodeArr};
+    return {isDayArr, currentRain, temps, hours, weathercodeArr};
 }
