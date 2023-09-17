@@ -15,7 +15,7 @@ function Home() {
         <main>
             <Info />
             <Left />
-            <Right />
+            <Right data={weatherData}/>
             <Forecast data={weatherData}/>
         </main>
     </>
