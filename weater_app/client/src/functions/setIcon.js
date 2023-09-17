@@ -1,58 +1,67 @@
 export default function setIcon(weathercode, isDay) {
     let weather;
+    let weatherDescription;
     weathercodes.map(code => {
         if (code.codes.includes(weathercode)) {
-            console.log("description: " + code.description + "    isDay: " + isDay)
             if (isDay === 0) {
-                code.description = code.description.replace("sun", "moon");
+                code.iconName = code.iconName.replace("sun", "moon");
             } else {
-                code.description = code.description.replace("moon", "sun");
+                code.iconName = code.iconName.replace("moon", "sun");
             }
-            weather = code.description;
+            weather = code.iconName;
+            weatherDescription = code.description;
             return;
         }
     })
-    return weather;
+    return [weather, weatherDescription];
 }
 
 const clear = {
     codes: [0],
-    description: "sun"
+    iconName: "sun",
+    description: "Clear"
 };
 
 const partlyClear = {
     codes: [1, 2],
-    description: "cloud-sun"
+    iconName: "cloud-sun",
+    description: "Partly clear"
 };
 
 const overcast = {
     codes: [3],
-    description: "cloud"
+    iconName: "cloud",
+    description: "Cloudy"
 };
 
 const smog = {
     codes: [45, 48],
-    description: "smog"
+    iconName: "smog",
+    description: "Overcast"
 };
 
 const lightRain = {
     codes: [51, 53, 56, 61, 63, 66, 80, 81],
-    description: "cloud-rain"
+    iconName: "cloud-rain",
+    description: "Rainy"
 };
 
 const heavyRain = {
     codes: [55, 57, 65, 67, 82],
-    description: "cloud-showers-heavy"
+    iconName: "cloud-showers-heavy",
+    description: "Rain showers"
 };
 
 const snow = {
     codes: [71, 73, 75, 77, 85, 86],
-    description: "snowflake"
+    iconName: "snowflake",
+    description: "Snowy"
 };
 
 const bolt = {
     codes: [95, 96, 99],
-    description: "cloud-bolt"
+    iconName: "cloud-bolt",
+    description: "Thunders"
 };
 
 const weathercodes = [

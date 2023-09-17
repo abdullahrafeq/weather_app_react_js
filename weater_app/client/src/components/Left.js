@@ -1,8 +1,11 @@
 import './Left.css';
 import FontAwesomeIcon from '../assets/Logos/FontAwesome';
 import LeftData  from '../data/LeftData.js';
+import changeLeft from '../functions/changeLeft.js';
 
 function Left({data}) {
+    changeLeft(data, LeftData);
+
     return (
         <aside className="left">
             <span id="mainWeatherIcon">

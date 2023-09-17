@@ -1,13 +1,14 @@
 import './Info.css';
+import InfoData from '../data/InfoData.js';
 
 function Info({data}) {
     return (
         <section className="info">
             <p id="place">
-                Sverige
+                {InfoData[0].location}
             </p>
             <p id="weekday">
-                Lördag
+                {InfoData[0].weekDay}
             </p>
         </section>
     );

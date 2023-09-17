@@ -1,6 +1,6 @@
 export default [
     {
-        Location: "Sverige",
-        weekDay: "Lördag"
+        location: "Sverige",
+        weekDay: "Söndag"
     }
 ];
