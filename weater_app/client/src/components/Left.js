@@ -1,18 +1,19 @@
 import './Left.css';
 import FontAwesomeIcon from '../assets/Logos/FontAwesome';
+import LeftData  from '../data/LeftData.js';
 
-function Left() {
+function Left({data}) {
     return (
         <aside className="left">
             <span id="mainWeatherIcon">
-                <FontAwesomeIcon iconName={"cloud"}/>
+                <FontAwesomeIcon iconName={LeftData[0].icon}/>
             </span>
             <span>
                 <p id="temp">
-                    7{'\u00b0'}
+                    {LeftData[0].temperature}{'\u00b0'}
                 </p>
                 <p id="weatherDescription">
-                    Overcast clouds
+                    {LeftData[0].description}
                 </p>
             </span>
         </aside>

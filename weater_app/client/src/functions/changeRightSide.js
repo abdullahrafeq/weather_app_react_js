@@ -7,7 +7,7 @@ export default function changeRightSide(data, RightData) {
         } = data;
         currentSunrise = makeSubstring(currentSunrise);
         currentSunset= makeSubstring(currentSunset);
-        const values = [maxTemp, windspeed, currentSunrise, minTemp, currentRain, currentSunset];
+        const values = [maxTemp + '\u00b0', windspeed, currentSunrise, minTemp + '\u00b0', currentRain, currentSunset];
         
         RightData.forEach((element, index) => {
             element.value = values[index];
@@ -18,4 +18,3 @@ export default function changeRightSide(data, RightData) {
 function makeSubstring(string) {
     return string.substring(string.length-5, string.length);
 }
-

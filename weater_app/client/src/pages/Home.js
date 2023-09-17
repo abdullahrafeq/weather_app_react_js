@@ -13,8 +13,8 @@ function Home() {
     <>
         <Search setWeatherData={setWeatherData}/>
         <main>
-            <Info />
-            <Left />
+            <Info data={weatherData}/>
+            <Left data={weatherData}/>
             <Right data={weatherData}/>
             <Forecast data={weatherData}/>
         </main>

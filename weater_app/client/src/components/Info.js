@@ -1,6 +1,6 @@
 import './Info.css';
 
-function Info() {
+function Info({data}) {
     return (
         <section className="info">
             <p id="place">

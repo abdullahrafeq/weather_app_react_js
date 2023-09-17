@@ -4,7 +4,6 @@ import ForeCastData from '../data/ForeCastData.js';
 import changeForeCastCard from '../functions/changeForecastCard.js';
 
 function Forecast({data}) {
-    //console.log(data);
     changeForeCastCard(data, ForeCastData);
     
     return (
