@@ -1,13 +1,9 @@
 import './Search.css';
 import React, {useState, useEffect} from 'react';
 import getWeather from '../functions/getWeather';
+import getCurrentLocation from '../functions/getCurrentLocation';
 
 function Search({setWeatherData, setWeekDay}) {
-    
-    useEffect(() => {
-        getWeather("Sverige", setWeatherData, setWeekDay);
-    }, [])
-
     let [inputValue, setInputValue] = useState("");
     
     const handleInputChange = (event) => {
@@ -16,6 +12,7 @@ function Search({setWeatherData, setWeekDay}) {
     
     const handleSearch = (event) => {
         if (event.key === "Enter" || event.type === "click") {
+            getCurrentLocation();
             event.preventDefault(); // Prevent the form to submit
             getWeather(inputValue, setWeatherData, setWeekDay);
             setInputValue("");
