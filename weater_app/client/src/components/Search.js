@@ -13,6 +13,7 @@ function Search({setWeatherData, setWeekDay}) {
         if (event.key === "Enter" || event.type === "click") {
             event.preventDefault(); // Prevent the form to submitt
             getWeather(inputValue, setWeatherData, setWeekDay);
+            setInputValue("");
         }
     };
 
