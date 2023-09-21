@@ -1,8 +1,5 @@
 import './Search.css';
 import React, {useState} from 'react';
-import LocationApi from '../api/LocationApi';
-import WeatherApi from '../api/WeatherApi';
-import TranslateWeekDay from '../api/TranslateWeekDay';
 import getWeather from '../functions/getWeather';
 
 function Search({setWeatherData, setWeekDay}) {
@@ -11,27 +8,10 @@ function Search({setWeatherData, setWeekDay}) {
     const handleInputChange = (event) => {
         setInputValue(event.target.value);
     }
- 
-    /*
-    const getWeather = () => {
-        LocationApi(inputValue)
-        .then(locationData => {
-            const {locationName, lat, lon} = locationData;
-            return WeatherApi(locationName, lat, lon);
-        })
-        .then(weatherData => {
-            setWeatherData(weatherData);
-            return TranslateWeekDay();
-        })
-        .then(translatedText => {
-            let {translation} = translatedText;
-            console.log(translation);
-            setWeekDay(translation);
-        })
-        .catch(error => console.log(error))
-    }*/
-    //it changes location as i type in the input
-    getWeather(inputValue, setWeatherData, setWeekDay)
+
+    const handleButtonClick = () => {
+        getWeather(inputValue, setWeatherData, setWeekDay)
+    }
 
     return (
     <header>
@@ -45,7 +25,7 @@ function Search({setWeatherData, setWeekDay}) {
                 value={inputValue}
                 onChange={handleInputChange}>
             </input>
-            <button type="button" id="btn" onClick={getWeather}>
+            <button type="button" id="btn" onClick={handleButtonClick}>
                 <i className="fa-solid fa-magnifying-glass"></i>
             </button>
         </form>
