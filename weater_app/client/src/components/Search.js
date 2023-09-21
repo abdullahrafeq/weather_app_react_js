@@ -9,17 +9,10 @@ function Search({setWeatherData, setWeekDay}) {
         setInputValue(event.target.value);
     }
 
-    const handleButtonClick = () => {
-        getWeather(inputValue, setWeatherData, setWeekDay);
-    };
-
-    const handleEnterPress = (event) => {
-        if (event.key === "Enter") {
-            console.log("if")
+    const handleSearch = (event) => {
+        if (event.key === "Enter" || event.type === "click") {
             event.preventDefault(); // Prevent the form to submitt
             getWeather(inputValue, setWeatherData, setWeekDay);
-        } else {
-            console.log("else")
         }
     };
 
@@ -34,10 +27,10 @@ function Search({setWeatherData, setWeekDay}) {
                 id="search" 
                 value={inputValue}
                 onChange={handleInputChange}
-                onKeyDown={handleEnterPress}
+                onKeyDown={handleSearch}
             >
             </input>
-            <button type="button" id="btn" onClick={handleButtonClick}>
+            <button type="button" id="btn" onClick={handleSearch}>
                 <i className="fa-solid fa-magnifying-glass"></i>
             </button>
         </form>
