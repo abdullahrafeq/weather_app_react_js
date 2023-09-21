@@ -1,7 +1,6 @@
 import getCurrentCoordinates from "./getCurrentCoordinates";
 import currentLocationApi from "../api/currentLocationApi";
-import WeatherApi from "../api/WeatherApi";
-import TranslateWeekDay from '../api/TranslateWeekDay';
+import fetchWeatherData from "./fetchWeatherData";
 
 export default function getCurrentLocation(setWeatherData, setWeekDay) {
     getCurrentCoordinates()
@@ -13,17 +12,7 @@ export default function getCurrentLocation(setWeatherData, setWeekDay) {
     })
     .then(locationData => {
         const {locationName, lon, lat} = locationData;
-        return WeatherApi(locationName, lat, lon);
-    })
-    .then(weatherData => {
-        setWeatherData(weatherData);
-        console.log(weatherData);
-        return TranslateWeekDay();
-    })
-    .then(translatedText => {
-        let {translation} = translatedText;
-        console.log(translation);
-        setWeekDay(translation);
+        fetchWeatherData(setWeatherData, setWeekDay, locationName, lat, lon);
     })
     .catch(error => console.log(error))
 }

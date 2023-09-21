@@ -6,9 +6,9 @@ import getCurrentLocation from '../functions/getCurrentLocation';
 function Search({setWeatherData, setWeekDay}) {
     let [inputValue, setInputValue] = useState("");
     
-    useEffect(()=>{
+    useEffect(() => {
         getCurrentLocation(setWeatherData, setWeekDay);
-    },[])
+    }, [])
 
     const handleInputChange = (event) => {
         setInputValue(event.target.value);
