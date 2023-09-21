@@ -1,7 +1,6 @@
 export default function getCurrentCoordinates() {
     return new Promise((resolve, reject) => {
         if (navigator.geolocation) {
-            console.log("here")
             navigator.geolocation.getCurrentPosition((position) => {
                 try {
                     const lat = position.coords.latitude;

@@ -1,7 +1,7 @@
 const express = require('express');
 const router = express.Router();
 
-router.get("/:locationWeekday", (req, res) => {
+router.get("/:location", (req, res) => {
     const encodedWeekday = req.params.locationWeekday;
     const weekday = decodeURIComponent(encodedWeekday); // Decode the URL parameter
     const translateUrl = `https://translate.googleapis.com/translate_a/single?client=gtx&sl=auto&tl=en&dt=t&q=${weekday}`;

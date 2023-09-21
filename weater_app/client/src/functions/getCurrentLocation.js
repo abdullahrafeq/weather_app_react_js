@@ -5,7 +5,6 @@ import fetchWeatherData from "./fetchWeatherData";
 export default function getCurrentLocation(setWeatherData, setWeekDay) {
     getCurrentCoordinates()
     .then(currentCoordinates => {
-        console.log(currentCoordinates);
         const lon = currentCoordinates[0];
         const lat = currentCoordinates[1];
         return currentLocationApi(lon, lat);
