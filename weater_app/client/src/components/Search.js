@@ -1,17 +1,22 @@
 import './Search.css';
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 import getWeather from '../functions/getWeather';
 
 function Search({setWeatherData, setWeekDay}) {
+    
+    useEffect(() => {
+        getWeather("Sverige", setWeatherData, setWeekDay);
+    }, [])
+
     let [inputValue, setInputValue] = useState("");
     
     const handleInputChange = (event) => {
         setInputValue(event.target.value);
     }
-
+    
     const handleSearch = (event) => {
         if (event.key === "Enter" || event.type === "click") {
-            event.preventDefault(); // Prevent the form to submitt
+            event.preventDefault(); // Prevent the form to submit
             getWeather(inputValue, setWeatherData, setWeekDay);
             setInputValue("");
         }
