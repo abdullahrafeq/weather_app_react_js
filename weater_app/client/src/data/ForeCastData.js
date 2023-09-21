@@ -2,79 +2,79 @@ export default [
     {
         date: "",
         time: "",
-        icon: "Icon",
+        icon: "",
         temperature: ""
     },
     {
         date: "",
         time: "",
-        icon: "Icon",
+        icon: "",
         temperature: ""
     },
     {
         date: "",
         time: "",
-        icon: "Icon",
+        icon: "",
         temperature: ""
     },
     {
         date: "",
         time: "",
-        icon: "Icon",
+        icon: "",
         temperature: ""
     },
     {
         date: "",
         time: "",
-        icon: "Icon",
+        icon: "",
         temperature: ""
     },
     {
         date: "",
         time: "",
-        icon: "Icon",
+        icon: "",
         temperature: ""
     },
     {
         date: "",
         time: "",
-        icon: "Icon",
+        icon: "",
         temperature: ""
     },
     {
         date: "",
         time: "",
-        icon: "Icon",
+        icon: "",
         temperature: ""
     },
     {
         date: "",
         time: "",
-        icon: "Icon",
+        icon: "",
         temperature: ""
     },
     {
         date: "",
         time: "",
-        icon: "Icon",
+        icon: "",
         temperature: ""
     },
     {
         date: "",
         time: "",
-        icon: "Icon",
+        icon: "",
         temperature: ""
     },
     {
         date: "",
         time: "",
-        icon: "Icon",
+        icon: "",
         temperature: ""
     },
     {
         date: "",
         time: "",
-        icon: "Icon",
+        icon: "",
         temperature: ""
     }
 ]

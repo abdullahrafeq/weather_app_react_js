@@ -3,6 +3,7 @@ import React, {useState} from 'react';
 import LocationApi from '../api/LocationApi';
 import WeatherApi from '../api/WeatherApi';
 import TranslateWeekDay from '../api/TranslateWeekDay';
+import getWeather from '../functions/getWeather';
 
 function Search({setWeatherData, setWeekDay}) {
     let [inputValue, setInputValue] = useState("");
@@ -11,6 +12,7 @@ function Search({setWeatherData, setWeekDay}) {
         setInputValue(event.target.value);
     }
  
+    /*
     const getWeather = () => {
         LocationApi(inputValue)
         .then(locationData => {
@@ -27,7 +29,9 @@ function Search({setWeatherData, setWeekDay}) {
             setWeekDay(translation);
         })
         .catch(error => console.log(error))
-    }
+    }*/
+    //it changes location as i type in the input
+    getWeather(inputValue, setWeatherData, setWeekDay)
 
     return (
     <header>
