@@ -9,8 +9,5 @@ export default function getCurrentLocation() {
         const lat = currentCoordinates[1];
         return currentLocationApi(lon, lat);
     })
-    .then(currentLocationName => {
-        console.log(currentLocationName);
-    })
     .catch(error => console.log(error))
 }

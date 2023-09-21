@@ -2,8 +2,9 @@ export default function currentLocationApi(lon, lat) {
     return fetch(`http://localhost:5000/currentLocation/${lon}/${lat}`)
     .then(response => response.json())
     .then(data => {
-        console.log("here4")
-        const {adress: {LongLabel: currentLocationName}} = data;
+        console.log(data)
+        const {address: {Match_addr: currentLocationName}} = data;
+        console.log(currentLocationName);
         return currentLocationName;
     })
     .catch(error => {
