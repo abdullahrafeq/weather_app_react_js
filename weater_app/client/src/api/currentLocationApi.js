@@ -3,9 +3,9 @@ export default function currentLocationApi(lon, lat) {
     .then(response => response.json())
     .then(data => {
         console.log(data)
-        const {address: {Match_addr: currentLocationName}} = data;
-        console.log(currentLocationName);
-        return currentLocationName;
+        const {address: {Match_addr: locationName}, location: {x: lon, y: lat}} = data;
+        console.log(locationName);
+        return {locationName, lon, lat};
     })
     .catch(error => {
         console.log("Error while fetching location: " + error);

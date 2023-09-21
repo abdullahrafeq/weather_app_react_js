@@ -6,13 +6,16 @@ import getCurrentLocation from '../functions/getCurrentLocation';
 function Search({setWeatherData, setWeekDay}) {
     let [inputValue, setInputValue] = useState("");
     
+    useEffect(()=>{
+        getCurrentLocation(setWeatherData, setWeekDay);
+    },[])
+
     const handleInputChange = (event) => {
         setInputValue(event.target.value);
     }
     
     const handleSearch = (event) => {
         if (event.key === "Enter" || event.type === "click") {
-            getCurrentLocation();
             event.preventDefault(); // Prevent the form to submit
             getWeather(inputValue, setWeatherData, setWeekDay);
             setInputValue("");
