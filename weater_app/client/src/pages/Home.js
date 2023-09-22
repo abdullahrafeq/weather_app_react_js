@@ -19,7 +19,7 @@ function Home() {
           const newClass = weatherData.a.is_day === 0 ? 'night' : 'morning';
           changeBodyClass(newClass);
         }
-      }, [weatherData]);
+    }, [weatherData]);
 
     return (
     <>

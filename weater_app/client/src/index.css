@@ -14,6 +14,7 @@ body {
 
 .morning {
     background-image: url("./assets/Images/morning.jpg");
+    text-shadow: 1px 1px 2px #002d7b;;
 }
 
 .night {
